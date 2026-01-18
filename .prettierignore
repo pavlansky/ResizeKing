@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Static Assets
+public/
+
+# IDE files
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+
+# Version Control
+.git/
+
+# JSON
+*.json
+
+# Optional: Ignore lock files if you don't want them formatted
+package-lock.json
+yarn.lock
