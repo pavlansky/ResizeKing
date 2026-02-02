@@ -1,0 +1,27 @@
+{
+  "GeneralMetadata": {
+    "title": "Resize King | Bezplatné zmenšenie obrázkov, videa."
+  },
+  "LandingPage": {
+    "title": "Súkromné zmenšenie súborov",
+    "subtitle": "rýchlo a bezpečne priamo v prehliadači",
+    "trust_note": "Vhodné pre citlivé dokumenty - súbory neopustia vaše zariadenie.",
+    "select_file_text": "Zvoľte typ súboru :",
+    "compress_image": "obrázok",
+    "compress_video": "video"
+  },
+  "Footer": {
+    "credits_text": "web vytvoril"
+  },
+  "Navbar": {
+    "about_link": "o projekte",
+    "home_link": "domov"
+  },
+  "LanguagePicker": {
+    "heading": "Zvoľte jazyk"
+  },
+  "AboutPage": {
+    "title": "O projekte ",
+    "brand": "Resize-King"
+  }
+}

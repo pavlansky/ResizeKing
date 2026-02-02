@@ -1,0 +1,27 @@
+{
+  "GeneralMetadata": {
+    "title": "Resize King | Free images & video compression."
+  },
+  "LandingPage": {
+    "title": "Private File Resizer",
+    "subtitle": "Fast and secure directly in your browser",
+    "trust_note": "Safe for sensitive documents - files stays in your device, no upload.",
+    "select_file_text": "Select file type :",
+    "compress_image": "image",
+    "compress_video": "video"
+  },
+  "Footer": {
+    "credits_text": "created by"
+  },
+  "Navbar": {
+    "about_link": "about",
+    "home_link": "home"
+  },
+  "LanguagePicker": {
+    "heading": "Choose language"
+  },
+  "AboutPage": {
+    "title": "About ",
+    "brand": "Resize-King"
+  }
+}
