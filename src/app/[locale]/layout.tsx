@@ -5,8 +5,7 @@ import { hasLocale, Locale } from 'use-intl';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { createTheme, DirectionProvider, MantineProvider } from '@mantine/core';
-
+import { DirectionProvider, MantineProvider } from '@mantine/core';
 import {
   satoshi,
   inter,
@@ -19,6 +18,7 @@ import {
   notoDeva,
 } from '@/fonts/fonts';
 import { Metadata } from 'next';
+import { theme } from '@/components/MantineTheme/theme';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -39,45 +39,6 @@ export async function generateMetadata(
   };
 }
 
-// MANTINE theme
-const theme = createTheme({
-  // body text
-  fontFamily:
-    'var(--font-satoshi), ' +
-    'var(--font-inter), ' +
-    'var(--font-noto-arabic), ' +
-    'var(--font-noto-jp), ' +
-    'var(--font-noto-sc), ' +
-    'var(--font-noto-tc), ' +
-    'var(--font-noto-devanagari), ' +
-    'apple-system, ' +
-    'sans-serif',
-
-  // headings
-  headings: {
-    fontFamily:
-      'var(--font-bricolage), ' +
-      'var(--font-unbounded), ' +
-      'var(--font-inter),' +
-      ' var(--font-noto-arabic),' +
-      ' var(--font-noto-jp),' +
-      ' var(--font-noto-sc),' +
-      ' var(--font-noto-tc),' +
-      ' var(--font-noto-devanagari),' +
-      ' apple-system,' +
-      ' sans-serif',
-  },
-
-  breakpoints: {
-    xxs: '23.4375em', // 375px
-    xs: '36em', // 576px (default)
-    sm: '48em', // 768px (default)
-    md: '62em', // 992px (default)
-    lg: '75em', // 1200px (default)
-    xl: '88em', // 1400px (default)
-  },
-});
-
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[locale]'>) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params;
@@ -96,10 +57,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
     <html
       lang={locale}
       dir={isRTL ? 'rtl' : 'ltr'}
+      className={`${satoshi.variable} ${inter.variable} ${unbounded.variable} ${notoArabic.variable} ${bricolage.variable} ${notoTC.variable} ${notoSC.variable} ${notoJP.variable} ${notoDeva.variable}`}
     >
-      <body
-        className={`${satoshi.variable} ${inter.variable} ${unbounded.variable} ${notoArabic.variable} ${bricolage.variable} ${notoTC.variable} ${notoSC.variable} ${notoJP.variable} ${notoDeva.variable}`}
-      >
+      <body>
         <NextIntlClientProvider>
           <DirectionProvider initialDirection={isRTL ? 'rtl' : 'ltr'}>
             <MantineProvider
