@@ -6,4 +6,13 @@ export const routing = defineRouting({
 
   //used when no locale matches
   defaultLocale: 'en',
+  pathnames: {
+    '/': '/',
+    '/resize-video': {
+      sk: '/zmensi-video',
+    },
+    '/resize-image': {
+      sk: '/zmensi-obrazok',
+    },
+  },
 });
