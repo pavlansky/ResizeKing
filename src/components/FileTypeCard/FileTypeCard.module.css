@@ -10,7 +10,7 @@
     border: 4px solid transparent !important;
 
     background-image:
-            linear-gradient(#25262b, #25262b), linear-gradient(45deg, rgb(241, 39, 130), rgb(245, 175, 25));
+            linear-gradient(#1e1f23, #1e1f23), linear-gradient(45deg, rgb(241, 39, 130), rgb(245, 175, 25));
 
     background-origin: border-box;
     background-clip: padding-box, border-box;

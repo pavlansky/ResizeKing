@@ -1,8 +1,8 @@
 body {
-    background-color: #151718;
+    background-color: rgb(18, 19, 21);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 10px 10px;
-    background-position: 2px 2px;
+    background-size: 13px 13px;
+    background-position: -2px 0px;
     background-attachment: fixed;
 
 }
