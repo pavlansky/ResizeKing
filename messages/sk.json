@@ -22,6 +22,10 @@
   },
   "AboutPage": {
     "title": "O projekte ",
-    "brand": "Resize-King"
+    "brand": "Resize-King",
+    "paragraph_1": "Určite ste to už zažili: potrebujete nahrať <strong>fotografiu</strong> na úradný portál, do prihlášky, alebo na <strong>web</strong>, ale narazíte na nekompromisný <strong>limit 5 MB</strong>. Moderné smartfóny robia fotky v  úžasnej kvalite, no <strong>výsledné súbory</strong> sú pre dnešný internet často <strong>príliš „ťažké“</strong>. Pre mnohých je hľadanie spôsobu, ako <strong>fotku zmenšiť</strong> bez straty ostrosti zbytočnou technickou prekážkou.",
+    "paragraph_2": "Práve preto vznikol <strongbrand>Resize-King</strongbrand> <strong>nástroj</strong>, ktorý inteligentne a <strong>rýchlo</strong> rieši problém s <strong>prísnymi limitmi webov</strong>.",
+    "paragraph_3": "Celý tento projekt je navrhnutý ako „one-click“ riešenie pre každého.",
+    "list_text_1": "<strong>Jednoduchosť bez kompromisov:</strong> Nemusíte byť technický expert. Stačí vložiť súbor a Resize-King sa postará o zvyšok priamo vo vašom prehliadači, <strong>bezpečne a súkromne</strong> <green>(súbory neopustia vaše zariadenie a nebudú nahrané na server)</green>."
   }
 }

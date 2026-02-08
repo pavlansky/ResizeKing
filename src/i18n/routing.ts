@@ -14,5 +14,8 @@ export const routing = defineRouting({
     '/resize-image': {
       sk: '/zmensi-obrazok',
     },
+    '/about': {
+      sk: '/o-projekte',
+    },
   },
 });

@@ -22,6 +22,11 @@
   },
   "AboutPage": {
     "title": "About ",
-    "brand": "Resize-King"
+    "brand": "Resize-King",
+    "paragraph_1": "You've definitely experienced it: you need to upload a <strong>photo</strong> to an official portal, an application, or a <strong>website</strong>, but you hit an uncompromising <strong>5 MB limit</strong>. Modern smartphones take photos in amazing quality, but the <strong>resulting files</strong> are often <strong>too „heavy“</strong> for today's internet. For many, finding a way to <strong>resize a photo</strong> without losing sharpness is an unnecessary technical hurdle.",
+    "paragraph_2": "That’s exactly why <strongbrand>Resize-King</strongbrand> was created a <strong>tool</strong> that intelligently and <strong>quickly</strong> solves the problem of <strong>strict website limits</strong>.",
+    "paragraph_3": "This entire project is designed as a „one-click“ solution for everyone.",
+    "list_text_1": "<strong>Simplicity without compromise:</strong> You don't need to be a tech expert. Just insert your file and Resize-King takes care of the rest directly in your browser, <strong>safely and privately</strong> <green>(files never leave your device and are not uploaded to a server)</green>."
   }
+
 }
