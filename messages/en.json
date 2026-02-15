@@ -18,7 +18,8 @@
     "home_link": "home"
   },
   "LanguagePicker": {
-    "heading": "Choose language"
+    "heading": "Choose language",
+    "locale": "{locale, select, en {English} sk{Slovenčina} other {Unknown}}"
   },
   "AboutPage": {
     "title": "About ",

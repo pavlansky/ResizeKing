@@ -18,7 +18,8 @@
     "home_link": "domov"
   },
   "LanguagePicker": {
-    "heading": "Zvoľte jazyk"
+    "heading": "Zvoľte jazyk",
+    "locale": "{locale, select, en {Angličtina} sk{Slovenčina} other {Unknown}}"
   },
   "AboutPage": {
     "title": "O projekte ",
