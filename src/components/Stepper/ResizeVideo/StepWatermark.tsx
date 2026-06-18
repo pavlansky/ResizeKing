@@ -1,23 +1,43 @@
 import { useVideoResize } from '@/hooks/useVideoResize';
-import { Input, Radio } from '@mantine/core';
+import { Group, Input, Radio, Stack, TextInput } from '@mantine/core';
 
 type Props = {
   controller: ReturnType<typeof useVideoResize>;
 };
 
-export default function StepWatermark(controller: Props) {
+export default function StepWatermark({ controller }: Props) {
   return (
     <form>
-      <Input.Wrapper label="Do you want to use watermark ? ">
-        <Radio
-          color="orange.8"
-          label="yes"
-        />
-        <Radio
-          color="orange.8"
-          label="no"
-        />
-      </Input.Wrapper>
+      <Stack gap="xl">
+        <Radio.Group
+          name="useWatermark"
+          label=" Do you want to use watermark ? "
+          value={controller.state.options.watermarkEnabled ? 'yes' : 'no'}
+          onChange={(value) => {
+            controller.handleWatermarkToggle(value === 'yes');
+          }}
+        >
+          <Group mt="xs">
+            <Radio
+              value="yes"
+              label="yes"
+              color="orange.8"
+            />
+            <Radio
+              value="no"
+              label="no"
+              color="orange.8"
+            />
+          </Group>
+        </Radio.Group>
+        {controller.state.options.watermarkEnabled && (
+          <TextInput
+            label="Text for watermark:"
+            placeholder="Enter watermark text"
+            value={controller.state.options.watermark || ''}
+          />
+        )}
+      </Stack>
     </form>
   );
 }

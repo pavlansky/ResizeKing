@@ -8,6 +8,7 @@ import { IconHeart } from '@tabler/icons-react';
 import FileTypeCard from '@/components/FileTypeCard/FileTypeCard';
 import cardClasses from '@/components/FileTypeCard/FileTypeCard.module.css';
 import { Link } from '@/i18n/navigation';
+import ResizeVideoLink from '@/components/ResizeVideoLink/ResizeVideoLink';
 
 export default function Home({ params }: PageProps<'/[locale]'>) {
   const { locale } = use(params);
@@ -110,15 +111,7 @@ export default function Home({ params }: PageProps<'/[locale]'>) {
             w="100%"
             spacing={{ base: 'md', xs: rem(50), md: rem(60) }}
           >
-            <Link
-              href={'/resize-video'}
-              style={{ display: 'flex', textDecoration: 'none' }}
-            >
-              <FileTypeCard
-                label={t('compress_video')}
-                iconClass={cardClasses.videoIcon}
-              />
-            </Link>
+            <ResizeVideoLink label={t('compress_video')} />
             <Link
               href={'/resize-image'}
               style={{ display: 'flex', textDecoration: 'none' }}
