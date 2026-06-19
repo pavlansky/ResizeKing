@@ -20,9 +20,19 @@ export default function StepUpload({ controller, ...dropzoneProps }: Props) {
         maxFiles={1}
         onDrop={(files) => controller.handleFileDrop(files[0])}
         onReject={(files) => controller.handleFileError(files[0].errors[0].code)}
-        maxSize={5 * 1024 ** 2}
+        maxSize={Math.floor(1.95 * 1024 ** 3)}
         accept={{
-          'video/*': [],
+          'video/mp4': ['.mp4', '.m4v'],
+          'video/webm': ['.webm'],
+          'video/quicktime': ['.mov'],
+          'video/x-matroska': ['.mkv'],
+          'video/x-msvideo': ['.avi'],
+          'video/x-ms-wmv': ['.wmv'],
+          'video/mpeg': ['.mpeg', '.mpg'],
+          'video/ogg': ['.ogv'],
+          'video/3gpp': ['.3gp'],
+          'video/mp2t': ['.ts'],
+          'video/x-flv': ['.flv'],
         }}
         {...dropzoneProps}
       >
