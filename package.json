@@ -10,6 +10,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
     "@mantine/core": "^8.3.12",
     "@mantine/dropzone": "^8.3.15",
     "@mantine/form": "^8.3.18",
