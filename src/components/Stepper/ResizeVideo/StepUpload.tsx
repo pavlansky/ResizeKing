@@ -14,8 +14,12 @@ type Props = {
 export default function StepUpload({ controller, ...dropzoneProps }: Props) {
   const t = useTranslations('ResizeVideoPage.Stepper.step_1');
   return (
-    <Container px="0">
+    <Container
+      px="0"
+      maw={{ sm: rem(550) }}
+    >
       <Dropzone
+        py={{ sm: rem(50) }}
         multiple={false}
         maxFiles={1}
         onDrop={(files) => controller.handleFileDrop(files[0])}

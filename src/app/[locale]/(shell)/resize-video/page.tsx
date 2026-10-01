@@ -5,6 +5,7 @@ import { Locale, useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { BrandHeading } from '@/components/BrandHeading/BrandHeading';
 import StepperResizeVideo from '@/components/Stepper/ResizeVideo/StepperResizeVideo';
+import { IconSparkles2 } from '@tabler/icons-react';
 
 export default function ResizeVideo({ params }: PageProps<'/[locale]/resize-video'>) {
   const { locale } = use(params);
@@ -32,23 +33,31 @@ export default function ResizeVideo({ params }: PageProps<'/[locale]/resize-vide
           >
             <BrandHeading component="span" />
           </Title>
-          <Title
-            order={2}
-            c="gray.1"
-          >
-            {t('title')}
-          </Title>
         </Flex>
-        <Center>
+        <Stack mt={{ base: 'xl', sm: 'sm' }}>
+          <Center visibleFrom="sm">
+            <IconSparkles2
+              stroke={2}
+              color="#F4952D"
+              size={26}
+            />
+            <Title
+              order={2}
+              c="gray.1"
+            >
+              {t('title')}
+            </Title>
+          </Center>
+
           <Title
             order={3}
             fz={{ base: rem(18) }}
-            mt={{ base: 'md' }}
             bg="dark.9"
+            ta="center"
           >
             {t('subtitle')}
           </Title>
-        </Center>
+        </Stack>
       </Stack>
       <Box>
         <StepperResizeVideo />

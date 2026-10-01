@@ -3,6 +3,7 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
+  primaryColor: 'orange',
   // body text
   fontFamily:
     'var(--font-satoshi), ' +
