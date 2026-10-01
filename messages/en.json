@@ -15,8 +15,8 @@
   },
   "Navbar": {
     "about_link": "about",
-    "home_link": "home",
-    "video_resize_link": "resize-video"
+    "home_link": "home"
+
   },
   "LanguagePicker": {
     "heading": "Choose language",
@@ -31,34 +31,52 @@
     "list_text_1": "<strong>Simplicity without compromise:</strong> You don't need to be a tech expert. Just insert your file and Resize-King takes care of the rest directly in your browser, <strong>safely and privately</strong> <green>(files never leave your device and are not uploaded to a server)</green>."
   },
   "ResizeVideoPage": {
-    "title": "Hocus-Pocus: Shrink the Focus.",
-    "subtitle": "Magic that shrink your files.",
+    "title": "Hocus-Pocus",
+    "subtitle": "Magic that shrinks your files.",
     "Stepper": {
       "progress_bar": "of",
       "step_1": {
         "label": "Choose video",
         "description": "Step 1",
         "content": "Drag video here or click to select video",
-        "limit_notice": "file size should not exceed <strong>1.9 GB</strong>",
-        "errors": {
-          "wrong_file_text": "Only video files are allowed !"
-        },
-        "notifications": {
-          "file_success": "Selected file"
-        }
+        "limit_notice": "file size should not exceed <strong>1.9 GB</strong>"
+
       },
       "step_2": {
         "label": "Optional Settings",
-        "description": "Step 2"
+        "description": "Step 2",
+        "watermark": "Do you want to use watermark ?",
+        "watermark_error": "Watermark text is required !",
+        "option_yes": "yes",
+        "option_no": "no",
+        "input_label": "Text for watermark:",
+        "input_placeholder": "Enter watermark text"
+      },
+      "stepper_buttons": {
+        "next_button": "Next",
+        "back_button": "Prev",
+        "process_button": "Start processing"
       }
+    },
+    "Processing" : {
+      "loading": "Loading",
+      "processing": "Processing",
+      "error_title": "Error",
+      "error_text": "Something went wrong, please try again !",
+      "finished": "Finished !",
+      "download_button": "Download",
+      "another_button": "Try another !",
+      "again_button": "Try again"
     }
   },
-
   "StepNotifications": {
     "error_title": "Error",
     "wrong_file_text": "Only video files are allowed !",
     "file_upload_success": "Selected file"
 
+  },
+  "FFmpeg": {
+    "not_loaded": "FFmpeg is not loaded yet"
   }
 
 }

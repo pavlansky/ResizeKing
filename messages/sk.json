@@ -15,8 +15,8 @@
   },
   "Navbar": {
     "about_link": "o projekte",
-    "home_link": "domov",
-    "video_resize_link": "resize-video"
+    "home_link": "domov"
+
   },
   "LanguagePicker": {
     "heading": "Zvoľte jazyk",
@@ -29,5 +29,51 @@
     "paragraph_2": "Práve preto vznikol <strongbrand>Resize-King</strongbrand> <strong>nástroj</strong>, ktorý inteligentne a <strong>rýchlo</strong> rieši problém s <strong>prísnymi limitmi webov</strong>.",
     "paragraph_3": "Celý tento projekt je navrhnutý ako „one-click“ riešenie pre každého.",
     "list_text_1": "<strong>Jednoduchosť bez kompromisov:</strong> Nemusíte byť technický expert. Stačí vložiť súbor a Resize-King sa postará o zvyšok priamo vo vašom prehliadači, <strong>bezpečne a súkromne</strong> <green>(súbory neopustia vaše zariadenie a nebudú nahrané na server)</green>."
+  },
+  "ResizeVideoPage": {
+    "title": "Hokus-pokus",
+    "subtitle": "Mágia, ktorá zmenší vaše súbory.",
+    "Stepper": {
+      "progress_bar": "z",
+      "step_1": {
+        "label": "Zvoľte video",
+        "description": "Krok 1",
+        "content": "Presuňte video sem, alebo kliknite a vyberte video",
+        "limit_notice": "veľkosť súboru nesmie presiahnuť <strong>1,9 GB</strong>"
+      },
+      "step_2": {
+        "label": "Voliteľné nastavenia",
+        "description": "Krok 2",
+        "watermark": "Chcete použiť vodoznak ?",
+        "watermark_error": "Text vodoznaku je povinný !",
+        "option_yes": "áno",
+        "option_no": "nie",
+        "input_label": "Text vodoznaku:",
+        "input_placeholder": "Zadajte text vodoznaku"
+      },
+      "stepper_buttons": {
+        "next_button": "Ďalej",
+        "back_button": "Späť",
+        "process_button": "Spustiť spracovanie"
+      }
+    },
+    "Processing": {
+      "loading": "Načítava sa",
+      "processing": "Spracováva sa",
+      "error_title": "Chyba",
+      "error_text": "Niečo sa pokazilo, skúste to znova !",
+      "finished": "Hotovo !",
+      "download_button": "Stiahnuť",
+      "another_button": "Skúsiť iný súbor !",
+      "again_button": "Skúsiť znova"
+    }
+  },
+  "StepNotifications": {
+    "error_title": "Chyba",
+    "wrong_file_text": "Povolené sú iba video súbory !",
+    "file_upload_success": "Vybraný súbor"
+  },
+  "FFmpeg": {
+    "not_loaded": "FFmpeg ešte nie je načítaný"
   }
 }
