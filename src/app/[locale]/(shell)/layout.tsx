@@ -1,6 +1,11 @@
 import { ReactNode } from 'react';
 import AppShellClient from '@/components/layout/AppShellClient';
+import { FFmpegProvider } from '@/context/FFmpegcontext';
 
 export default function ShellLayout({ children }: { children: ReactNode }) {
-  return <AppShellClient>{children}</AppShellClient>;
+  return (
+    <FFmpegProvider>
+      <AppShellClient>{children}</AppShellClient>
+    </FFmpegProvider>
+  );
 }
