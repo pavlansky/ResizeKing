@@ -52,9 +52,6 @@ export default function NavigationHeader() {
             <Link href="/about">
               <NavButton label={t('about_link')} />
             </Link>
-            <Link href="/resize-video">
-              <NavButton label={t('video_resize_link')} />
-            </Link>
             <LanguagePicker />
           </Group>
         </Group>
