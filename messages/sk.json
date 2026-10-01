@@ -15,7 +15,8 @@
   },
   "Navbar": {
     "about_link": "o projekte",
-    "home_link": "domov"
+    "home_link": "domov",
+    "video_resize_link": "resize-video"
   },
   "LanguagePicker": {
     "heading": "Zvoľte jazyk",

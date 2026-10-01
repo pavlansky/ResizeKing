@@ -15,7 +15,8 @@
   },
   "Navbar": {
     "about_link": "about",
-    "home_link": "home"
+    "home_link": "home",
+    "video_resize_link": "resize-video"
   },
   "LanguagePicker": {
     "heading": "Choose language",
@@ -28,6 +29,36 @@
     "paragraph_2": "That’s exactly why <strongbrand>Resize-King</strongbrand> was created a <strong>tool</strong> that intelligently and <strong>quickly</strong> solves the problem of <strong>strict website limits</strong>.",
     "paragraph_3": "This entire project is designed as a „one-click“ solution for everyone.",
     "list_text_1": "<strong>Simplicity without compromise:</strong> You don't need to be a tech expert. Just insert your file and Resize-King takes care of the rest directly in your browser, <strong>safely and privately</strong> <green>(files never leave your device and are not uploaded to a server)</green>."
+  },
+  "ResizeVideoPage": {
+    "title": "Hocus-Pocus: Shrink the Focus.",
+    "subtitle": "Magic that shrink your files.",
+    "Stepper": {
+      "progress_bar": "of",
+      "step_1": {
+        "label": "Choose video",
+        "description": "Step 1",
+        "content": "Drag video here or click to select video",
+        "limit_notice": "file size should not exceed <strong>1.9 GB</strong>",
+        "errors": {
+          "wrong_file_text": "Only video files are allowed !"
+        },
+        "notifications": {
+          "file_success": "Selected file"
+        }
+      },
+      "step_2": {
+        "label": "Optional Settings",
+        "description": "Step 2"
+      }
+    }
+  },
+
+  "StepNotifications": {
+    "error_title": "Error",
+    "wrong_file_text": "Only video files are allowed !",
+    "file_upload_success": "Selected file"
+
   }
 
 }

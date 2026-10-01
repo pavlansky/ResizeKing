@@ -1,0 +1,11 @@
+.steps {
+    display: none;
+}
+
+@mixin larger-than $mantine-breakpoint-sm {
+    .steps {
+        display: flex;
+        margin-bottom: var(--mantine-spacing-xl);
+        margin-top: var(--mantine-spacing-xl);
+    }
+}
