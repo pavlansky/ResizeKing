@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resize-King 👑
 
-## Getting Started
+**Magic that shrinks your files.**
 
-First, run the development server:
+A browser-based video compressor and watermarking tool — no server-side processing, no upload to a backend. Your video never leaves your device; everything runs client-side via WebAssembly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+> 🔗 Live demo: 
+ 
+---
+
+## What it does
+
+- Drag-and-drop a video file (up to 1.9 GB)
+- Optionally add a text watermark
+- Compress and transcode it entirely in the browser
+- Download the result — the original file is never uploaded anywhere
+---
+## Architecture
+
+State is managed with a **controller + reducer** pattern rather than scattering `useState` across components:
+
+```
+useFFmpeg          — thin wrapper around @ffmpeg/ffmpeg (load/exec/read/write, sanitized progress)
+FFmpegContext      — provides a single shared useFFmpeg instance app-wide, mounted once in the shell layout
+useVideoResize     — feature-level reducer: file selection, watermark options, job status, wizard step
+StepperResizeVideo — presentational wizard (upload → watermark → processing)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Each piece only knows about the layer directly below it — components never touch `@ffmpeg/ffmpeg` or the Context directly, only the `useVideoResize` controller.
+ 
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Why this project is more than it looks like
 
-## Learn More
+On the surface this is a small wizard-style form. Under the hood, it solves a handful of problems:
 
-To learn more about Next.js, take a look at the following resources:
+- **Defensive progress handling.** FFmpeg.wasm's own progress reporting is known to be unreliable upstream — it can briefly report wildly implausible values, or reset mid-transcode as its internal duration estimate corrects itself. Progress is sanitized at the source (clamped to a plausible range, never allowed to move backward) rather than trusted raw.
+- **Thread count is capped deliberately, not left to "auto."** Left unbounded, encoder buffer allocation scales with thread count — on a high-core-count machine this can exhaust the WASM worker's memory and crash it outright rather than just running slower. Threads are capped to the device's core count minus one, leaving a core free for the UI thread.
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| | |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
+| UI | Mantine |
+| i18n | next-intl |
+| Video processing | `@ffmpeg/ffmpeg` + `@ffmpeg/util` (multi-threaded core) |
+| Icons | Tabler Icons |
+ 
+---
 
-## Deploy on Vercel
+## Getting started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git clone <https://github.com/Qwertin/ResizeKing.git>
+cd resize-king
+npm install
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000).
+
+### Requirements
+
+- A watermark font file at `public/fonts/` (checked into the repo) — required for the `drawtext` filter, since the WASM sandbox has no system fonts.
+- Any browser with `SharedArrayBuffer` support (all modern evergreen browsers). The required COOP/COEP headers are already configured in `next.config.ts`.
+---
+
+## Known limitations
+
+- Files over 1.9 GB are rejected client-side (practical ceiling for in-browser WASM memory).
+- Encoding speed is bound by the user's own device — there's no server fallback for lower-end hardware.
+- Image compression (visible as a second option on the landing page) is not yet implemented.
+---
+
+## License
+
+
+ 
+---
+
+Built by **Tomáš Pavlanský** — © 2026
+ 
