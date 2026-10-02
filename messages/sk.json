@@ -68,6 +68,9 @@
       "again_button": "Skúsiť znova"
     }
   },
+  "ResizeImagePage":{
+    "title": "Už čoskoro !"
+  },
   "StepNotifications": {
     "error_title": "Chyba",
     "wrong_file_text": "Povolené sú iba video súbory !",
