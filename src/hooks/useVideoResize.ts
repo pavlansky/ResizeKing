@@ -212,9 +212,11 @@ export const useVideoResize = () => {
 
       const args = ['-i', inputName];
       if (state.options.watermarkEnabled && state.options.watermark) {
+        await writeFile('ArialMdm.ttf', await fetchFile('/fonts/ArialMdm.ttf'));
+        await writeFile('watermark.txt', state.options.watermark);
         args.push(
           '-vf',
-          `drawtext=text='${state.options.watermark}':x=10:y=10:fontsize=24:fontcolor=white`,
+          'drawtext=fontfile=ArialMdm.ttf:textfile=watermark.txt:x=30:y=30:fontsize=50:fontcolor=white',
         );
       }
 
