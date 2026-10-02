@@ -74,6 +74,7 @@
   "StepNotifications": {
     "error_title": "Chyba",
     "wrong_file_text": "Povolené sú iba video súbory !",
+    "too_large_file_text": "Zvolený súbor je príliš veľký!",
     "file_upload_success": "Vybraný súbor"
   },
   "FFmpeg": {

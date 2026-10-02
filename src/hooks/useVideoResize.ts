@@ -172,6 +172,12 @@ export const useVideoResize = () => {
       });
       return;
     }
+    if (code === 'file-too-large') {
+      dispatch({
+        type: 'SELECT_FILE_ERROR',
+        payload: { error: t('StepNotifications.too_large_file_text') },
+      });
+    }
   };
 
   const handleWatermarkToggle = (enabled: boolean) => {

@@ -75,6 +75,7 @@
   "StepNotifications": {
     "error_title": "Error",
     "wrong_file_text": "Only video files are allowed !",
+    "too_large_file_text": "File exceeds the maximum size limit !",
     "file_upload_success": "Selected file"
 
   },
