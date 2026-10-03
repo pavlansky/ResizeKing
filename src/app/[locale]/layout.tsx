@@ -35,7 +35,16 @@ export async function generateMetadata(
   });
 
   return {
+    metadataBase: new URL('https://resizeking.com'),
     title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      siteName: 'ResizeKing',
+      type: 'website',
+      locale,
+    },
   };
 }
 
