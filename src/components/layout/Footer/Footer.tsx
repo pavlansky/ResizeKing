@@ -26,7 +26,7 @@ export default function Footer() {
         </Text>
         <Anchor
           target="_blank"
-          href="https://github.com/Qwertin"
+          href="https://github.com/pavlansky"
           size="xs"
           c="gray.3"
         >
