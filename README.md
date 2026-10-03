@@ -4,7 +4,7 @@
 
 A browser-based video compressor and watermarking tool — no server-side processing, no upload to a backend. Your video never leaves your device; everything runs client-side via WebAssembly.
 
-> 🔗 Live demo: 
+> 🔗 Live: [www.resizeking.com](https://www.resizeking.com)
  
 ---
 
@@ -41,14 +41,14 @@ On the surface this is a small wizard-style form. Under the hood, it solves a ha
 
 ## Tech stack
 
-| | |
-|---|---|
-| Framework | Next.js (App Router) |
-| Language | TypeScript |
-| UI | Mantine |
-| i18n | next-intl |
+|                  |                                                         |
+|------------------|---------------------------------------------------------|
+| Framework        | Next.js (App Router)                                    |
+| Language         | TypeScript                                              |
+| UI               | Mantine                                                 |
+| i18n             | next-intl                                               |
 | Video processing | `@ffmpeg/ffmpeg` + `@ffmpeg/util` (multi-threaded core) |
-| Icons | Tabler Icons |
+| Icons            | Tabler Icons                                            |
  
 ---
 
@@ -78,7 +78,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## License
 
-
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
  
 ---
 
