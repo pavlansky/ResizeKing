@@ -21,7 +21,7 @@
   },
   "LanguagePicker": {
     "heading": "Zvoľte jazyk",
-    "locale": "{locale, select, en {Angličtina} sk{Slovenčina} other {Unknown}}"
+    "locale": "{locale, select, en {English} sk{Slovenčina} zh{简体中文} other {Unknown}}"
   },
   "AboutPage": {
     "title": "O projekte ",

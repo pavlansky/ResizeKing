@@ -33,6 +33,7 @@ export default function LanguagePicker() {
   const LOCALE_FLAGS: Record<string, string> = {
     en: 'us',
     sk: 'sk',
+    zh: 'cn',
   };
 
   function onSelectChange(nextLocale: Locale) {
