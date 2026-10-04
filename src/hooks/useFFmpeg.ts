@@ -82,7 +82,7 @@ export function useFFmpeg(): UseFFmpegResults {
       if (!loaded) throw new Error(t('not_loaded'));
       return getInstance().exec(args);
     },
-    [loaded, getInstance],
+    [loaded, getInstance, t],
   );
 
   const writeFile = useCallback(
