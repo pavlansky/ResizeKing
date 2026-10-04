@@ -4,7 +4,7 @@
     "description": "Compress video and image files right in your browser for free. No upload to server: your video never leaves your device. Add a text watermark and download the result."
   },
   "LandingPage": {
-    "title": "Private File Resizer",
+    "title": "Private File Compression",
     "subtitle": "Fast and secure directly in your browser",
     "trust_note": "Safe for sensitive documents - files stays in your device, no upload.",
     "select_file_text": "Select file type :",
