@@ -252,7 +252,7 @@ export const useVideoResize = () => {
         type: 'JOB_ERROR',
         payload: {
           error:
-            err instanceof Error ? err.message : t('ResizeVideoPage.Stepper.Processing.error_text'),
+            err instanceof Error ? err.message : t('ResizeVideoPage.Processing.error_text'),
         },
       });
     }
