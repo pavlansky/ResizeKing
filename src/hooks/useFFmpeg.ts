@@ -4,10 +4,12 @@ import { toBlobURL } from '@ffmpeg/util';
 import { useTranslations } from 'next-intl';
 
 const CORE_BASE_URL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/umd';
+//more threads than 11 cause silent hangs or RuntimeError: indirect call signature mismatch
+const MAX_THREADS = 9;
 
 function getThreadCount(): number {
   const cores = typeof navigator !== 'undefined' ? navigator.hardwareConcurrency : undefined;
-  return Math.max(1, (cores || 2) - 1);
+  return Math.min(MAX_THREADS, Math.max(1, (cores || 2) - 1));
 }
 
 export interface UseFFmpegResults {
