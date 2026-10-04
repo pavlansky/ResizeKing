@@ -34,6 +34,7 @@ export default function LanguagePicker() {
     en: 'us',
     sk: 'sk',
     zh: 'cn',
+    ar: 'sa',
   };
 
   function onSelectChange(nextLocale: Locale) {

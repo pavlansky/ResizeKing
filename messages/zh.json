@@ -20,7 +20,7 @@
   },
   "LanguagePicker": {
     "heading": "选择语言",
-    "locale": "{locale, select, en {English} sk{Slovenčina} zh{简体中文} other {未知}}"
+    "locale": "{locale, select, en {English} sk{Slovenčina} zh{简体中文} ar{العربية} other {未知}}"
   },
   "AboutPage": {
     "title": "关于 ",

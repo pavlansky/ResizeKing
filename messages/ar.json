@@ -1,0 +1,83 @@
+{
+  "GeneralMetadata": {
+    "title": "Resize King | ضغط الصور ومقاطع الفيديو مجانًا",
+    "description": "اضغط ملفات الفيديو والصور مباشرةً في متصفحك مجانًا. بدون رفع إلى الخادم: ملفاتك تبقى على جهازك. أضف علامة مائية نصية ونزّل النتيجة."
+  },
+  "LandingPage": {
+    "title": "ضغط الملفات بخصوصية",
+    "subtitle": "سريع وآمن مباشرةً من متصفحك",
+    "trust_note": "مناسب للملفات الحساسة - تبقى ملفاتك على جهازك ولا يتم رفعها.",
+    "select_file_text": "اختر نوع الملف:",
+    "compress_image": "صورة",
+    "compress_video": "فيديو"
+  },
+  "Footer": {
+    "credits_text": "من تطوير"
+  },
+  "Navbar": {
+    "about_link": "عن الأداة",
+    "home_link": "الرئيسية"
+  },
+  "LanguagePicker": {
+    "heading": "اختر اللغة",
+    "locale": "{locale, select, en {English} sk {Slovenčina} zh {简体中文} ar {العربية} other {غير معروفة}}"
+  },
+  "AboutPage": {
+    "title": "عن ",
+    "brand": "Resize-King",
+    "paragraph_1": "لا شك أنك مررت بهذا الموقف: تريد رفع <strong>صورة</strong> إلى بوابة رسمية أو نموذج أو <strong>موقع إلكتروني</strong>، لكنك تصطدم بحد صارم يبلغ <strong>5 ميجابايت</strong>. تلتقط الهواتف الذكية الحديثة صورًا بجودة مذهلة، لكن <strong>الملفات الناتجة</strong> تكون غالبًا <strong>كبيرة جدًا</strong> بالنسبة للإنترنت اليوم. وبالنسبة لكثير من الناس، يصبح البحث عن طريقة لـ<strong>تصغير حجم الصورة</strong> دون فقدان حدّتها عائقًا تقنيًا غير ضروري.",
+    "paragraph_2": "ولهذا تحديدًا تم إنشاء <strongbrand>Resize-King</strongbrand>، وهي <strong>أداة</strong> تتعامل بذكاء و<strong>بسرعة</strong> مع مشكلة <strong>الحدود الصارمة للمواقع</strong>.",
+    "paragraph_3": "صُممت هذه الأداة بالكامل لتكون حلًا سهلًا بنقرة واحدة للجميع.",
+    "list_text_1": "<strong>سهولة بدون تنازلات:</strong> لست بحاجة إلى خبرة تقنية. ما عليك سوى اختيار ملفك، وسيتولى Resize-King بقية المهمة مباشرةً من متصفحك، <strong>بأمان وخصوصية</strong> <green>(لن تغادر الملفات جهازك ولن يتم رفعها إلى أي خادم)</green>."
+  },
+  "ResizeVideoPage": {
+    "title": "سحر بسيط",
+    "subtitle": "سحر يصغّر حجم ملفاتك.",
+    "Stepper": {
+      "progress_bar": "من",
+      "step_1": {
+        "label": "اختر الفيديو",
+        "description": "الخطوة 1",
+        "content": "اسحب الفيديو إلى هنا أو اضغط لاختياره",
+        "limit_notice": "يجب ألا يتجاوز حجم الملف <strong>1.9 جيجابايت</strong>"
+      },
+      "step_2": {
+        "label": "إعدادات اختيارية",
+        "description": "الخطوة 2",
+        "watermark": "هل تريد إضافة علامة مائية؟",
+        "watermark_error": "يجب إدخال نص العلامة المائية!",
+        "option_yes": "نعم",
+        "option_no": "لا",
+        "input_label": "نص العلامة المائية:",
+        "input_placeholder": "أدخل نص العلامة المائية"
+      },
+      "stepper_buttons": {
+        "next_button": "التالي",
+        "back_button": "السابق",
+        "process_button": "بدء المعالجة"
+      }
+    },
+    "Processing": {
+      "loading": "جارٍ التحميل",
+      "processing": "جارٍ المعالجة",
+      "error_title": "حدث خطأ",
+      "error_text": "حدث خطأ ما، يُرجى المحاولة مرة أخرى!",
+      "finished": "تم بنجاح!",
+      "download_button": "تنزيل",
+      "another_button": "جرّب ملفًا آخر!",
+      "again_button": "حاول مرة أخرى"
+    }
+  },
+  "ResizeImagePage": {
+    "title": "قريبًا!"
+  },
+  "StepNotifications": {
+    "error_title": "حدث خطأ",
+    "wrong_file_text": "يُسمح بملفات الفيديو فقط!",
+    "too_large_file_text": "حجم الملف يتجاوز الحد الأقصى المسموح!",
+    "file_upload_success": "تم اختيار الملف"
+  },
+  "FFmpeg": {
+    "not_loaded": "لم يتم تحميل FFmpeg بعد"
+  }
+}
