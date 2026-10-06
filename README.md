@@ -1,4 +1,4 @@
-# Resize-King 
+# ResizeKing 
 
 **Magic that shrinks your files.**
 
