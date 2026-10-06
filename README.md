@@ -1,4 +1,4 @@
-# Resize-King 👑
+# Resize-King 
 
 **Magic that shrinks your files.**
 
@@ -24,21 +24,8 @@ useFFmpeg          — thin wrapper around @ffmpeg/ffmpeg (load/exec/read/write,
 FFmpegContext      — provides a single shared useFFmpeg instance app-wide, mounted once in the shell layout
 useVideoResize     — feature-level reducer: file selection, watermark options, job status, wizard step
 StepperResizeVideo — presentational wizard (upload → watermark → processing)
-```
-
-Each piece only knows about the layer directly below it — components never touch `@ffmpeg/ffmpeg` or the Context directly, only the `useVideoResize` controller.
- 
+``` 
 ---
-
-
-## Why this project is more than it looks like
-
-On the surface this is a small wizard-style form. Under the hood, it solves a handful of problems:
-
-- **Defensive progress handling.** FFmpeg.wasm's own progress reporting is known to be unreliable upstream — it can briefly report wildly implausible values, or reset mid-transcode as its internal duration estimate corrects itself. Progress is sanitized at the source (clamped to a plausible range, never allowed to move backward) rather than trusted raw.
-- **Thread count is capped deliberately, not left to "auto."** Left unbounded, encoder buffer allocation scales with thread count — on a high-core-count machine this can exhaust the WASM worker's memory and crash it outright rather than just running slower. Threads are capped to the device's core count minus one, leaving a core free for the UI thread.
----
-
 ## Tech stack
 
 |                  |                                                         |
