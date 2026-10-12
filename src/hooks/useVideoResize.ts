@@ -228,15 +228,25 @@ export const useVideoResize = () => {
 
       args.push(
         '-c:v',
-        'libx264',
+        'libx265',
         '-crf',
-        '20',
+        '29',
         '-preset',
         'superfast',
+        '-pix_fmt',
+        'yuv420p',
+        '-fpsmax',
+        '60',
+        '-c:a',
+        'aac',
         '-b:a',
-        '198k',
+        '128k',
+        '-ac',
+        '2',
         '-threads',
         String(threadCount),
+        '-tag:v',
+        'hvc1',
         'output.mp4',
       );
 
@@ -251,8 +261,7 @@ export const useVideoResize = () => {
       dispatch({
         type: 'JOB_ERROR',
         payload: {
-          error:
-            err instanceof Error ? err.message : t('ResizeVideoPage.Processing.error_text'),
+          error: err instanceof Error ? err.message : t('ResizeVideoPage.Processing.error_text'),
         },
       });
     }
