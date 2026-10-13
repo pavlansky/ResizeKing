@@ -216,7 +216,7 @@ export const useVideoResize = () => {
 
       await writeFile(inputName, await fetchFile(state.fileDrop.file));
 
-      const args = ['-i', inputName];
+      const args = ['-i', inputName, '-c:v', 'libx264'];
       if (state.options.watermarkEnabled && state.options.watermark) {
         await writeFile('ArialMdm.ttf', await fetchFile('/fonts/ArialMdm.ttf'));
         await writeFile('watermark.txt', state.options.watermark);
@@ -226,13 +226,17 @@ export const useVideoResize = () => {
         );
       }
 
+      const fileSizeMB = state.fileDrop.file.size / (1024 * 1024);
+
+      if (fileSizeMB < 30) {
+        args.push('-crf', '24', '-preset', 'fast', '-maxrate', '1200k', '-bufsize', '2500k');
+      } else if (fileSizeMB <= 400) {
+        args.push('-crf', '21', '-preset', 'faster', '-maxrate', '6000k', '-bufsize', '12000k');
+      } else {
+        args.push('-crf', '20', '-preset', 'superfast');
+      }
+
       args.push(
-        '-c:v',
-        'libx265',
-        '-crf',
-        '29',
-        '-preset',
-        'superfast',
         '-pix_fmt',
         'yuv420p',
         '-fpsmax',
@@ -245,8 +249,6 @@ export const useVideoResize = () => {
         '2',
         '-threads',
         String(threadCount),
-        '-tag:v',
-        'hvc1',
         'output.mp4',
       );
 
