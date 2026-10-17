@@ -8,7 +8,7 @@ type FFmpegStatus = 'idle' | 'loading-ffmpeg' | 'ready' | 'error';
 type FileStatus = 'not-selected' | 'selected' | 'error';
 type JobStatus = 'idle' | 'processing' | 'Completed' | 'error';
 
-interface ResizeState {
+export interface ResizeState {
   fileDrop: {
     status: FileStatus;
     file: File | null;
@@ -28,7 +28,7 @@ interface ResizeState {
   };
 }
 
-const initialState: ResizeState = {
+export const initialState: ResizeState = {
   fileDrop: {
     status: 'not-selected',
     file: null,
@@ -63,7 +63,7 @@ type ResizeAction =
   | { type: 'JOB_ERROR'; payload: { error: string } }
   | { type: 'RESET' };
 
-function resizeReducer(state: ResizeState, action: ResizeAction): ResizeState {
+export function resizeReducer(state: ResizeState, action: ResizeAction): ResizeState {
   switch (action.type) {
     case 'SELECT_FILE':
       return { ...state, fileDrop: { status: 'selected', file: action.payload, error: null } };
