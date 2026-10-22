@@ -39,7 +39,7 @@
     width: 80px !important;
     height: 80px !important;
     -webkit-mask-image: url('https://api.iconify.design/tabler:video-filled.svg');
-    mask-image: url('https://api.iconify.design/tabler:video-filled.svg');
+    mask-image: url('https://api.iconify.design/tabler/video-filled.svg');
     transform: translateX(6px);
 }
 
@@ -47,5 +47,5 @@
     width: 60px !important;
     height: 60px !important;
     -webkit-mask-image: url('https://api.iconify.design/tabler:photo-filled.svg');
-    mask-image: url('https://api.iconify.design/tabler:photo-filled.svg');
+    mask-image: url('https://api.iconify.design/tabler/photo-filled.svg');
 }
