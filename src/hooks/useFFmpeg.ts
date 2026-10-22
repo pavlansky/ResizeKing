@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 const CORE_BASE_URL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.10/dist/umd';
 //more threads than 11 cause silent hangs or RuntimeError: indirect call signature mismatch
-const MAX_THREADS = 9;
+const MAX_THREADS = 5;
 
 function getThreadCount(): number {
   const cores = typeof navigator !== 'undefined' ? navigator.hardwareConcurrency : undefined;
