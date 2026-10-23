@@ -1,11 +1,12 @@
 import '@mantine/core/styles.css';
 import '@mantine/dropzone/styles.css';
-import { Container, Group, rem, Space, Text } from '@mantine/core';
+import { Container, Group, rem, Text } from '@mantine/core';
 import { Dropzone, DropzoneProps } from '@mantine/dropzone';
 import { IconDeviceDesktopDown, IconUpload, IconX } from '@tabler/icons-react';
-import { useVideoResize } from '@/hooks/useVideoResize';
 import { useTranslations } from 'next-intl';
+
 import { StepNotify } from '@/components/Stepper/StepNotify';
+import { useVideoResize } from '@/hooks/useVideoResize';
 
 type Props = {
   controller: ReturnType<typeof useVideoResize>;

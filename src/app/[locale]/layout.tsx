@@ -1,11 +1,13 @@
 import '@mantine/core/styles.css';
 import './globals.css';
-import { routing } from '@/i18n/routing';
-import { hasLocale, Locale } from 'use-intl';
-import { notFound } from 'next/navigation';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
 import { DirectionProvider, MantineProvider } from '@mantine/core';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { hasLocale, Locale } from 'use-intl';
+
+import { theme } from '@/components/MantineTheme/theme';
 import {
   satoshi,
   inter,
@@ -17,8 +19,7 @@ import {
   notoTC,
   notoDeva,
 } from '@/fonts/fonts';
-import { Metadata } from 'next';
-import { theme } from '@/components/MantineTheme/theme';
+import { routing } from '@/i18n/routing';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

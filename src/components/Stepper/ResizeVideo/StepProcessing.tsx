@@ -1,7 +1,6 @@
 import {
   Button,
   Center,
-  Container,
   Flex,
   Group,
   Loader,
@@ -11,9 +10,7 @@ import {
   Text,
   Title,
 } from '@mantine/core';
-import { useVideoResize } from '@/hooks/useVideoResize';
-import { ReactNode, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useMediaQuery } from '@mantine/hooks';
 import {
   IconChevronsRight,
   IconCircleDashedCheck,
@@ -21,7 +18,10 @@ import {
   IconFaceIdError,
   IconReload,
 } from '@tabler/icons-react';
-import { useMediaQuery } from '@mantine/hooks';
+import { useTranslations } from 'next-intl';
+import { ReactNode, useEffect } from 'react';
+
+import { useVideoResize } from '@/hooks/useVideoResize';
 
 type Props = {
   controller: ReturnType<typeof useVideoResize>;

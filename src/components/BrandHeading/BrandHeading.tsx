@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
 import { Title, Text, createPolymorphicComponent, type TitleProps } from '@mantine/core';
+import { forwardRef } from 'react';
 
 const _BrandHeading = forwardRef<HTMLHeadingElement, TitleProps>(function BrandHeading(props, ref) {
   return (

@@ -1,6 +1,5 @@
 'use client';
 import 'flag-icons/css/flag-icons.min.css';
-import classes from './LanguagePicker.module.css';
 import {
   Modal,
   Text,
@@ -13,11 +12,14 @@ import {
   ScrollArea,
 } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { useTransition } from 'react';
-import { usePathname, useRouter } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 import { Locale, useLocale, useTranslations } from 'next-intl';
+import { useTransition } from 'react';
+
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+
+import classes from './LanguagePicker.module.css';
 
 export default function LanguagePicker() {
   const router = useRouter();

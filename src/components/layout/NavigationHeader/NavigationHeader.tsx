@@ -1,10 +1,11 @@
 import { Box, Burger, Container, Divider, Drawer, Group, rem, Stack, Text } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { useTranslations } from 'next-intl';
+
+import LanguagePicker from '@/components/layout/NavigationHeader/LanguagePicker';
+import NavButton from '@/components/layout/NavigationHeader/NavButton';
 import Logo from '@/components/Logo/Logo';
 import { Link } from '@/i18n/navigation';
-import NavButton from '@/components/layout/NavigationHeader/NavButton';
-import { useTranslations } from 'next-intl';
-import { useDisclosure } from '@mantine/hooks';
-import LanguagePicker from '@/components/layout/NavigationHeader/LanguagePicker';
 
 export default function NavigationHeader() {
   const t = useTranslations('Navbar');

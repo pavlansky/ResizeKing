@@ -1,4 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
+
 import { initialState, resizeReducer, ResizeState } from '@/hooks/useVideoResize';
 
 jest.mock('next-intl', () => ({

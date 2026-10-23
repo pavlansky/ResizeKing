@@ -1,7 +1,8 @@
 'use client';
 
-import { ReactNode } from 'react';
 import { AppShell } from '@mantine/core';
+import { ReactNode } from 'react';
+
 import Footer from '@/components/layout/Footer/Footer';
 import NavigationHeader from '@/components/layout/NavigationHeader/NavigationHeader';
 

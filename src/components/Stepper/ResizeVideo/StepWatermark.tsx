@@ -1,6 +1,7 @@
-import { useVideoResize } from '@/hooks/useVideoResize';
 import { Flex, Group, Radio, Stack, TextInput } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+
+import { useVideoResize } from '@/hooks/useVideoResize';
 
 type Props = {
   controller: ReturnType<typeof useVideoResize>;

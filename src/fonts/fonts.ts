@@ -1,4 +1,3 @@
-import localFont from 'next/font/local';
 import {
   Bricolage_Grotesque,
   Inter,
@@ -9,6 +8,7 @@ import {
   Noto_Sans_TC,
   Noto_Sans_Devanagari,
 } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const satoshi = localFont({
   src: [

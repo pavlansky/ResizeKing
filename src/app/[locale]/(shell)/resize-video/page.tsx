@@ -1,11 +1,12 @@
-import { use } from 'react';
-import '@/app/[locale]/(shell)/page.module.css';
 import { Box, Center, Container, Flex, rem, Stack, Title } from '@mantine/core';
+import { IconSparkles2 } from '@tabler/icons-react';
 import { Locale, useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import { use } from 'react';
+
+import '@/app/[locale]/(shell)/page.module.css';
 import { BrandHeading } from '@/components/BrandHeading/BrandHeading';
 import StepperResizeVideo from '@/components/Stepper/ResizeVideo/StepperResizeVideo';
-import { IconSparkles2 } from '@tabler/icons-react';
 
 export default function ResizeVideo({ params }: PageProps<'/[locale]/resize-video'>) {
   const { locale } = use(params);

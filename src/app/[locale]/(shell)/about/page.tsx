@@ -1,9 +1,12 @@
+// noinspection JSUnusedGlobalSymbols
+
+import { Container, Flex, rem, Title, Text, Stack, Space } from '@mantine/core';
+import { Locale, useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
 import '@/app/[locale]/(shell)/page.module.css';
-import { Container, Flex, rem, Title, Text, Stack, Space } from '@mantine/core';
+
 import { BrandHeading } from '@/components/BrandHeading/BrandHeading';
-import { setRequestLocale } from 'next-intl/server';
-import { Locale, useTranslations } from 'next-intl';
 
 export default function About({ params }: PageProps<'/[locale]/about'>) {
   const { locale } = use(params);

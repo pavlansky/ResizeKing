@@ -1,13 +1,15 @@
 'use client';
-import { Container, Divider, Flex, rem, Space, Stack, Stepper, Text } from '@mantine/core';
-import classes from './StepperResizeVideo.module.css';
-import { useVideoResize } from '@/hooks/useVideoResize';
-import { ProgressBar } from '@/components/Stepper/ResizeVideo/ProgressBar';
+import { Container, Flex, rem, Space, Stack, Stepper, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
-import StepUpload from '@/components/Stepper/ResizeVideo/StepUpload';
-import { StepperButton } from '@/components/Stepper/StepperButton';
-import StepWatermark from '@/components/Stepper/ResizeVideo/StepWatermark';
+
+import { ProgressBar } from '@/components/Stepper/ResizeVideo/ProgressBar';
 import StepProcessing from '@/components/Stepper/ResizeVideo/StepProcessing';
+import StepUpload from '@/components/Stepper/ResizeVideo/StepUpload';
+import StepWatermark from '@/components/Stepper/ResizeVideo/StepWatermark';
+import { StepperButton } from '@/components/Stepper/StepperButton';
+import { useVideoResize } from '@/hooks/useVideoResize';
+
+import classes from './StepperResizeVideo.module.css';
 
 const PROCESSING_STEP_INDEX = 2;
 

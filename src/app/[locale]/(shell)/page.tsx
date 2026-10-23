@@ -1,14 +1,15 @@
-import { use } from 'react';
-import './page.module.css';
-import { setRequestLocale } from 'next-intl/server';
-import { Locale } from 'use-intl';
-import { useTranslations } from 'next-intl';
 import { Container, Flex, rem, Title, Text, Stack, Alert, SimpleGrid } from '@mantine/core';
 import { IconHeart } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { use } from 'react';
+import { Locale } from 'use-intl';
+import './page.module.css';
+
 import FileTypeCard from '@/components/FileTypeCard/FileTypeCard';
 import cardClasses from '@/components/FileTypeCard/FileTypeCard.module.css';
-import { Link } from '@/i18n/navigation';
 import ResizeVideoLink from '@/components/ResizeVideoLink/ResizeVideoLink';
+import { Link } from '@/i18n/navigation';
 
 export default function Home({ params }: PageProps<'/[locale]'>) {
   const { locale } = use(params);

@@ -1,7 +1,7 @@
-import { useReducer } from 'react';
-import { useTranslations } from 'next-intl';
-
 import { fetchFile } from '@ffmpeg/util';
+import { useTranslations } from 'next-intl';
+import { useReducer } from 'react';
+
 import { useFFmpegConext } from '@/context/FFmpegcontext';
 
 type FFmpegStatus = 'idle' | 'loading-ffmpeg' | 'ready' | 'error';

@@ -1,6 +1,6 @@
 import { Center, Flex, rem, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { IconRocket } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 
 export default function ComingSoon() {
   const t = useTranslations('ResizeImagePage');
