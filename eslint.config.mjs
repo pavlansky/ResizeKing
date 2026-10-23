@@ -4,6 +4,9 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 
+// Shared, so the overrides below don't silently drop it
+const parentImportPatterns = ['../*', './../*'];
+
 export default defineConfig([
   // Next.js recommended + Core Web Vitals
   ...nextVitals,
@@ -21,22 +24,30 @@ export default defineConfig([
     },
     rules: {
       'no-duplicate-imports': 'error',
-      'no-restricted-imports': [
+      'no-restricted-imports': ['error', { patterns: parentImportPatterns }],
+
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'import/order': [
         'error',
         {
-          patterns: ['../*', './../*'],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
         },
       ],
+      'import/no-cycle': ['error', { maxDepth: Infinity }],
     },
   },
 
-  // 🧱 Server Components (default in app/)
+  // Server Components (default in app/)
   {
     files: ['app/**/*.tsx'],
     rules: {
       'no-restricted-imports': [
         'error',
         {
+          patterns: parentImportPatterns,
           paths: [
             {
               name: 'react',
@@ -57,15 +68,16 @@ export default defineConfig([
     },
   },
 
-  // 🧩 Client Components (tools, UI)
+  // Client Components (tools, UI)
   {
     files: ['app/**/page.tsx', 'components/**/*.tsx'],
     rules: {
       'no-restricted-globals': 'off',
+      'no-restricted-imports': ['error', { patterns: parentImportPatterns }],
     },
   },
 
-  // 🧠 lib/ — pure helpers only
+  // lib/ - pure helpers only
   {
     files: ['lib/**/*.{ts,tsx}'],
     rules: {
@@ -73,7 +85,7 @@ export default defineConfig([
     },
   },
 
-  // Disable stylistic rules handled by Prettier
+  // Disable stylistic rules handled by Prettier (keep last)
   eslintConfigPrettier,
 
   // Ignore build artifacts
