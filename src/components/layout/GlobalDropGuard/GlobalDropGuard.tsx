@@ -1,7 +1,6 @@
 'use client';
 import { useEffect } from 'react';
 
-
 export default function GlobalDropGuard() {
   useEffect(() => {
     const preventDefault = (event: DragEvent) => event.preventDefault();

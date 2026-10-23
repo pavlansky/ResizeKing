@@ -1,6 +1,6 @@
 .activeButton:hover {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 .inactiveButton:hover {
-    background-color: var(--mantine-color-dark-7) !important;
+  background-color: var(--mantine-color-dark-7) !important;
 }
